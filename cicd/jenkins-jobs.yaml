@@ -26,5 +26,5 @@ spec:
   - id: jenkins-operator
     targets: "cicd/jobs/*.jenkins"
     description: "Jenkins Operator repository"
-    repositoryBranch: master
-    repositoryUrl: https://github.com/jenkinsci/kubernetes-operator.git
+    repositoryBranch: main
+    repositoryUrl: https://github.com/anle20/Infra-elsa.git
