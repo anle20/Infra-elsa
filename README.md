@@ -4,6 +4,8 @@
 
 helm repo add jenkins https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
 
+helm install jenkins jenkins/jenkins-operator -n jenkins-operator
+
 1. Watch Jenkins instance being created:
 $ kubectl --namespace jenkins-operator get pods -w
 
