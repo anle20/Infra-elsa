@@ -24,10 +24,3 @@ Add a line to the bottom of the /etc/hosts file on your computer (you will need 
 127.0.0.1 jenkins-elsa.example
 $ minikube tunnel
 Now open the browser and enter jenkins-elsa.example
-
-
-
-kubectl create secret generic jenkins-admin-credentials \
-  --from-literal=username=admin \
-  --from-literal=password=admin \
-  --namespace=jenkins-operator
