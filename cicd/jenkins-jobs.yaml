@@ -32,11 +32,6 @@ spec:
     - name: kubernetes-credentials-provider
       version: "0.20"
   seedJobs:
-  # - id: hackathon-starter
-  #   targets: "cicd/jobs/*.jenkins"
-  #   description: "hackathon-starter"
-  #   repositoryBranch: master
-  #   repositoryUrl: https://github.com/anle20/hackathon-starter-anle.git
   - id: hackathon-app
     targets: "cicd/jobs/*.jenkins"
     description: "hackathon-app"
