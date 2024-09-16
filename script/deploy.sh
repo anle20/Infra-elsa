@@ -13,5 +13,7 @@ helm install jenkins jenkins/jenkins-operator -n jenkins-operator
 k get secret jenkins-operator-credentials-jenkins -o 'jsonpath={.data.user}' | base64 -d
 k get secret jenkins-operator-credentials-jenkins -o 'jsonpath={.data.password}' | base64 -d
 
+kubectl port-forward jenkins-jenkins 8080:8080
+
 #create ingress
 k apply -f ../example-ingress.yaml
