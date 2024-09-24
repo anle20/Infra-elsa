@@ -20,3 +20,18 @@ Add a line to the bottom of the /etc/hosts file on your computer (you will need 
 $ minikube tunnel
 ```
 Now open the browser and enter jenkins-elsa.example
+
+## Using TF to create EKS cluster
+- VPC module: terraform-aws-modules/vpc/aws
+- EKS module: terraform-aws-modules/eks/aws
+
+We can create a specific environment with tfvars file in tfsettings like dev.tfvars
+
+To apply tf from local, we can use the below command
+```bash
+terraform init -backend-config="dev.tfvars"
+terraform plan -var-file="dev.tfvars"
+terraform apply -var-file="dev.tfvars"
+```
+
+However, we should use CI/CD to update and deploy for best practice.
